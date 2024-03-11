@@ -1,0 +1,13 @@
+type = "web_pixel_extension"
+name = "web-pixel-two"
+
+runtime_context = "strict"
+
+[settings]
+type = "object"
+
+[settings.fields.accountID]
+name = "123456"
+description = "123456"
+type = "single_line_text_field"
+validations = [{ name = "min", value = "1" }]

@@ -1,0 +1,20 @@
+query RunInput {
+  cart {
+    lines {
+      merchandise{
+        ... on ProductVariant {
+          id
+          product{
+            inAnyCollection( ids: ["gid://shopify/Collection/431436595424"])
+          }
+        }
+        __typename
+      }
+    }
+  }
+  discountNode {
+    metafield(namespace: "$app:order-discount-two", key: "function-configuration") {
+      value
+    }
+  }
+}
